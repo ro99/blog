@@ -1,5 +1,9 @@
 {
     "editor.formatOnSave": false,
     "editor.formatOnPaste": false,
-    "html.format.enable": false
+    "html.format.enable": false,
+    "github-actions.workflows.pinned.workflows": [
+        ".github/workflows/build-image.yml",
+        ".github/workflows/deploy.yml"
+    ]
 }

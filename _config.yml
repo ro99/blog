@@ -10,6 +10,7 @@ url: "https://ro99.github.io"
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
+  - jekyll-remote-theme
 
 tikz:
   pdf2svg: "/usr/bin/pdf2svg"

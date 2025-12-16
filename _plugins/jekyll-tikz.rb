@@ -8,12 +8,11 @@ module Jekyll
         @header = <<-'END'
 \documentclass{standalone}
 \usepackage{tikz}
+\usetikzlibrary{calc}
 \begin{document}
-\begin{tikzpicture}
         END
 
         @footer = <<-'END'
-\end{tikzpicture}
 \end{document}
         END
       end

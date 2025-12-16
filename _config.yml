@@ -11,4 +11,4 @@ markdown: kramdown
 usemathjax: true
 
 tikz:
-  pdf2svg: "/usr/bin/pdf2svg"
+  pdf2svg: "pdf2svg"

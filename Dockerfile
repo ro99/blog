@@ -1,4 +1,4 @@
-FROM ruby:3.2-bullseye
+FROM ruby:3.3.10-trixie
 
 # Install System Dependencies
 # texlive-latex-base: Basic LaTeX support

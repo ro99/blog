@@ -3,14 +3,12 @@ description: "A simple blog."
 baseurl: "/blog"
 url: "https://ro99.github.io"
 
-# theme: jekyll-theme-prime # Removed to avoid build errors since we use custom layouts.
-# Actually, for custom layouts on GH pages, better to not rely on a theme gem if we provide all layouts.
-# Let's keep it simple.
-
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
-  - jekyll-remote-theme
+
+markdown: kramdown
+usemathjax: true
 
 tikz:
   pdf2svg: "/usr/bin/pdf2svg"

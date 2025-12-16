@@ -3,6 +3,9 @@ description: "A simple blog."
 baseurl: "/blog"
 url: "https://ro99.github.io"
 
+include:
+  - assets/images
+
 plugins:
   - jekyll-seo-tag
   - jekyll-feed

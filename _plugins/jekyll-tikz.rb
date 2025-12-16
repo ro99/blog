@@ -25,7 +25,7 @@ module Jekyll
         pdf_path = File.join(tmp_directory, "#{@file_name}.pdf")
         FileUtils.mkdir_p tmp_directory
 
-        dest_directory = File.join(Dir.pwd, "svg", File.basename(context["page"]["url"], ".*"))
+        dest_directory = File.join(Dir.pwd, "assets", "images")
         dest_path = File.join(dest_directory, "#{@file_name}.svg")
         FileUtils.mkdir_p dest_directory
 
@@ -38,7 +38,7 @@ module Jekyll
           system("#{pdf2svg_path} #{pdf_path} #{dest_path}")
         end
 
-        web_dest_path = File.join("/svg", File.basename(context["page"]["url"], ".*"), "#{@file_name}.svg")
+        web_dest_path = File.join(context["site"]["baseurl"] || "", "assets", "images", "#{@file_name}.svg")
         "<embed src=\"#{web_dest_path}\" type=\"image/svg+xml\" />"
       end
 

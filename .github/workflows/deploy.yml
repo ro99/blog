@@ -20,14 +20,28 @@ jobs:
   wait-for-docker-build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Check if Dockerfile changed
+        id: dockerfile-check
+        run: |
+          if git diff --name-only HEAD^ HEAD | grep -q "^Dockerfile$"; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Wait for Docker build workflow
+        if: steps.dockerfile-check.outputs.changed == 'true'
         uses: lewagon/wait-on-check-action@v1.3.4
         with:
           ref: ${{ github.sha }}
           check-name: 'build-and-push'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 10
-          allowed-conclusions: success,skipped
 
   build:
     runs-on: ubuntu-latest

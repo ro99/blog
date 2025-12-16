@@ -8,3 +8,7 @@ Gemfile.lock
 _site
 .bundle
 .DS_Store
+_tikz_tmp/tikz-test/fermat-refraction-circle.log
+.gitignore
+fermat-refraction-circle.log
+_tikz_tmp/tikz-test/fermat-refraction-circle.tex

@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     texlive-pictures \
     texlive-latex-extra \
     texlive-pstricks \
+    texlive-science \
     pdf2svg \
     && rm -rf /var/lib/apt/lists/*
 

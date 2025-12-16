@@ -1,0 +1,112 @@
+body {
+    background-color: rgb(253, 251, 247);
+    color: rgb(26, 26, 26);
+    font-family: 'Crimson Pro', serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.wrapper {
+    max-width: 800px;
+    /* Constrain width for readability like the ref site typically would have */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    color: rgb(139, 115, 85);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+}
+
+.post-title {
+    font-size: 3rem;
+    margin-bottom: 0.2em;
+    color: rgb(26, 26, 26);
+}
+
+.post-meta {
+    color: #828282;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+/* Drop Cap Implementation */
+.post-content>p:first-of-type::first-letter {
+    font-size: 75.6px;
+    font-family: 'Cormorant Garamond', serif;
+    color: rgb(139, 115, 85);
+    float: left;
+    padding: 0px;
+    margin: 3.78px 11.34px 0px 0px;
+    line-height: 64.26px;
+}
+
+/* Make sure paragraphs clear properly if needed, though float usually flows text around */
+.post-content p {
+    margin-bottom: 1.5em;
+    font-size: 1.2rem;
+}
+
+/* Post List / Home Styling */
+.post-list {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+}
+
+.post-list li {
+    margin-bottom: 3rem;
+}
+
+.post-list .post-meta {
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    color: #828282;
+    display: block;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.post-list h2 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.post-link {
+    font-size: 2.2rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    color: rgb(26, 26, 26);
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.post-link:hover {
+    color: rgb(139, 115, 85);
+    text-decoration: none;
+}
+
+/* Responsiveness for TikZ and Images */
+svg, img {
+    max-width: 100%;
+    width: 100%; /* Force width to match container */
+    height: auto;
+    display: block;
+    margin: 1.5rem auto; /* Center them with some vertical spacing */
+}

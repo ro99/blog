@@ -7,7 +7,7 @@ gem "jekyll-commonmark-ghpages", "~> 0.5.1"
 gem "kramdown", "~> 2.4.0"
 gem "kramdown-parser-gfm", "~> 1.1.0"
 
-gem "minima", "~> 2.5"
+gem "minima", "~> 2.5.1"
 
 group :jekyll_plugins do
   gem "jekyll-seo-tag"

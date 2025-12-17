@@ -71,17 +71,6 @@ jobs:
           ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} \
           bundle exec jekyll build
 
-      - name: Debug - List generated files
-        run: |
-          echo "=== Contents of _site/assets/images ==="
-          ls -la _site/assets/images/ || echo "Directory does not exist"
-          echo "=== Contents of assets/images ==="
-          ls -la assets/images/ || echo "Directory does not exist"
-          echo "=== Contents of _tikz_tmp ==="
-          ls -la _tikz_tmp/ || echo "Directory does not exist"
-          echo "=== Contents of assets/images ==="
-          ls -la assets/images/ || echo "Directory does not exist"
-
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:

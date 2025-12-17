@@ -6,6 +6,9 @@ url: "https://ro99.github.io"
 include:
   - assets/images
 
+keep_files:
+  - assets/images
+
 plugins:
   - jekyll-seo-tag
   - jekyll-feed

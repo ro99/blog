@@ -36,6 +36,15 @@ module Jekyll
           File.open(tex_path, 'w') { |file| file.write("#{tikz_code}") }
           system("pdflatex -output-directory #{tmp_directory} #{tex_path}")
           system("#{pdf2svg_path} #{pdf_path} #{dest_path}")
+
+          # Register the generated file with Jekyll so it gets copied to _site
+          site = context.registers[:site]
+          site.static_files << Jekyll::StaticFile.new(
+            site,
+            site.source,
+            "assets/images",
+            "#{@file_name}.svg"
+          )
         end
 
         web_dest_path = File.join(context["site"]["baseurl"] || "", "assets", "images", "#{@file_name}.svg")

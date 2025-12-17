@@ -1,11 +1,7 @@
 .vscode/tasks.json
-assets/_tikz_tmp/test_tikz/test_image.aux
-assets/_tikz_tmp/test_tikz/test_image.log
-assets/_tikz_tmp/test_tikz/test_image.pdf
-assets/_tikz_tmp/test_tikz/test_image.tex
-assets/images/test_tikz/test_image.svg
 Gemfile.lock
 _site
+_tikz_tmp
 .bundle
 .DS_Store
 _tikz_tmp/tikz-test/fermat-refraction-circle.log
